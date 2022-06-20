@@ -1,0 +1,57 @@
+/* CSS */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@500;700&display=swap');
+
+#button-52 {
+  font-family: "Noto Sans Lao";
+  margin-top: 2rem;
+  padding: .3rem 2rem;
+  font-weight: bold;
+  font-size: 16px;
+  font-weight: 200;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  position: relative !important;
+  background-color: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: all .3s;
+  color: #002250;
+  font-weight: bold;
+  z-index: 10;
+}
+
+#button-52::before{
+  content: "";
+  background-color: transparent;
+  border: 3px solid #fff;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  bottom: .5rem;
+  right: .5rem;
+  z-index: -10;
+}
+
+#button-52::after {
+  content: ""; 
+  width: 10px; 
+  height: 20px; 
+  position: absolute; 
+  border-left: 1px solid #002250; 
+  right: -5px; 
+  bottom: -6px; 
+  transform: rotate(45deg); 
+  background: #002250;
+}
+
+#button-52:hover {
+  transform: scale(1.07);
+} 
+
+#button-52:hover::before {
+  opacity: 50% ;
+}
+
+

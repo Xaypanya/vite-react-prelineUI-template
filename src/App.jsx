@@ -1,71 +1,30 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React from 'react'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Home from "./Pages/Home"
+import EducationCenter from "./Pages/EducationCenter"
+import ForTheDeaf from "./Pages/ForTheDeaf"
+import OrganizationStructure from "./Pages/OrganizationStructure"
+import ServiceAndActivity from "./Pages/ServiceAndActivity"
+import Employee from "./Pages/Employee"
+import NotFound from "./Pages/NotFound"
+import Header from "./Pages/Components/Header"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App bg-slate-700 min-h-screen">
-      <div className='flex justify-center items-center'>
-       <h1 className='text-8xl text-white font-pops'>hello babi</h1>
-      </div>
-      <div class="hs-accordion-group">
-  <div class="hs-accordion active" id="hs-basic-heading-one">
-    <button class="hs-accordion-toggle hs-accordion-active:text-blue-600 group py-3 inline-flex items-center gap-x-3 w-full font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:hs-accordion-active:text-blue-600 dark:text-gray-200 dark:hover:text-gray-400" aria-controls="hs-basic-collapse-one">
-      <svg class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2.62421 7.86L13.6242 7.85999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M8.12421 13.36V2.35999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-      <svg class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2.62421 7.86L13.6242 7.85999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-      Accordion #1
-    </button>
-    <div id="hs-basic-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-heading-one">
-      <p class="text-gray-800 dark:text-gray-200">
-        <em>This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-      </p>
-    </div>
-  </div>
-
-  <div class="hs-accordion" id="hs-basic-heading-two">
-    <button class="hs-accordion-toggle hs-accordion-active:text-blue-600 group py-3 inline-flex items-center gap-x-3 w-full font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:hs-accordion-active:text-blue-600 dark:text-gray-200 dark:hover:text-gray-400" aria-controls="hs-basic-collapse-two">
-      <svg class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2.62421 7.86L13.6242 7.85999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M8.12421 13.36V2.35999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-      <svg class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2.62421 7.86L13.6242 7.85999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-      Accordion #2
-    </button>
-    <div id="hs-basic-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-heading-two">
-      <p class="text-gray-800 dark:text-gray-200">
-        <em>This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-      </p>
-    </div>
-  </div>
-
-  <div class="hs-accordion" id="hs-basic-heading-three">
-    <button class="hs-accordion-toggle hs-accordion-active:text-blue-600 group py-3 inline-flex items-center gap-x-3 w-full font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:hs-accordion-active:text-blue-600 dark:text-gray-200 dark:hover:text-gray-400" aria-controls="hs-basic-collapse-three">
-      <svg class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2.62421 7.86L13.6242 7.85999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M8.12421 13.36V2.35999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-      <svg class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2.62421 7.86L13.6242 7.85999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-      Accordion #3
-    </button>
-    <div id="hs-basic-collapse-three" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-heading-three">
-      <p class="text-gray-800 dark:text-gray-200">
-        <em>This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-      </p>
-    </div>
-  </div>
-</div>
-    </div>
+   <div className='bg-primary min-h-screen pt-16 md:pt-20'>
+      <Router>
+      <Header/>
+      <Routes>
+        <Route exact path='/' element={<Home/>}/>
+        <Route exact path='/hoh-education-center-for-the-hearing-impaired' element={<EducationCenter/>}/>
+        <Route exact path='/hoh-school-for-the-deaf' element={<ForTheDeaf/>}/>
+        <Route exact path='/structure' element={<OrganizationStructure/>}/>
+        <Route exact path='/service-activity/:seract_id' element={<ServiceAndActivity/>}/>
+        <Route exact path='/structure/employee/:emp_id' element={<Employee/>}/>
+        <Route path='*' element={<NotFound/>}/>
+      </Routes>
+    </Router>
+   </div>
   )
 }
 

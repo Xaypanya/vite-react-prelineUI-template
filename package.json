@@ -1,5 +1,5 @@
 {
-  "name": "vite-react-prelineui-template",
+  "name": "hoh",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -14,10 +14,15 @@
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
+    "@tailwindcss/line-clamp": "^0.4.0",
     "dotenv": "^16.0.1",
+    "firebase": "^9.8.1",
     "preline": "^1.1.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-router-dom": "6",
+    "react-scroll-to-top": "^1.0.8",
+    "swiper": "^8.2.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
